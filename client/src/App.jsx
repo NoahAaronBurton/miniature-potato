@@ -1,10 +1,12 @@
-
+import Header from './components/Header'
 import './App.css'
 
 function App() {
 
   return (
-  <h1 className='text-center text-bold'>Brendon Nielson</h1>
+  <div className='flex justify-center'>
+    <Header />
+  </div>
   )
 }
 
