@@ -1,5 +1,6 @@
 import Nav from './components/Nav'
 import Section from './components/Section'
+import Music from './components/Music'
 import profilePic from './assets/profile-pic.png'
 
 import './App.css'
@@ -34,6 +35,7 @@ function App() {
         <AboutMe />
       </Section>
       <Section title='My Music'/>
+      <Music />
       <Section title='My Work'/>
       <Section title='Services'/>
   </div>
