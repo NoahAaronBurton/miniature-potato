@@ -34,8 +34,11 @@ function App() {
       <Section title='About Me'>
         <AboutMe />
       </Section>
-      <Section title='My Music'/>
-      <Music />
+
+      <Section title='My Music'>
+        <Music />
+      </Section>
+      
       <Section title='My Work'/>
       <Section title='Services'/>
   </div>

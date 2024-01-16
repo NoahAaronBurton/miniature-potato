@@ -1,7 +1,9 @@
 var express = require('express');
 var SpotifyWebApi = require('spotify-web-api-node');
+var cors = require('cors');
 
 var app = express();
+app.use(cors());
 require('dotenv').config();
 
 // Create the api object with the credentials
@@ -13,7 +15,8 @@ var spotifyApi = new SpotifyWebApi({
 //endpoint to get artist top tracks
 app.get('/api/dvddy', function(req, res) {
     // Retrieve an access token.
-    spotifyApi.clientCredentialsGrant().then(
+    spotifyApi.clientCredentialsGrant()
+        .then(
         function(data) {
             console.log('The access token expires in ' + data.body['expires_in']);
             console.log('The access token is ' + data.body['access_token']);
@@ -23,7 +26,7 @@ app.get('/api/dvddy', function(req, res) {
     
             // Get DVDDY top tracks
             const artistId = '6Gnxo2IdtKi2isu0i6yFSl';
-            spotifyApi.getArtistTopTracks(artistId, 'US')
+            return spotifyApi.getArtistTopTracks(artistId, 'US')
             .then(function(data) {
                 res.send(data.body);
             }, function(err) {
