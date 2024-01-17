@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { SlSocialSpotify } from "react-icons/sl";
+import { Spotify } from 'react-spotify-embed';
 
 function Music() {
     const [tracks, setTracks] = useState(null);
@@ -23,28 +24,16 @@ function Music() {
 
 
     return (
-        <div className='flex'>
-          <div className='w-1/2'>
+        <div className='flex flex-col'>
             <div className='flex items-start'>
                 <SlSocialSpotify size={32}/>
                 <h2 className='text-2xl ml-1'>My Current Top Tracks:</h2>
             </div>
             {tracks && tracks.map((track, index) => (
-              <div className='flex flex-row bg-gray-400 my-2 h-10 mr-10' key={index}>
-                <img src={track.album.images[0]} className='w-10 h-10' alt="album artwork" />
-                <h2>{track.name}</h2>
+              <div key={index} className='flex flex-row mt-2 drop-shadow-lg'>
+                <Spotify wide link={track.external_urls.spotify} />
               </div>
             ))}
-          </div>
-          <div className='w-1/2 mx-5 my-5 items-center'>
-            <ul className="list-disc my-5">
-              <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-              <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-              <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-              <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-              <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-            </ul>
-          </div>
         </div>
       );
 }

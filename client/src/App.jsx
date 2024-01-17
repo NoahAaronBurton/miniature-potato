@@ -21,14 +21,13 @@ function App() {
   }
 
   return (
-  <div className='flex flex-col h-screen flex-wrap pt-5 w-full'>
-     <div className='container'>
+  <div className='flex flex-col min-h-screen flex-wrap pt-5 w-full'>
+     <div className='container w-full'>
             <h1 className='text-6xl text-balance font-bold'>Brendon Nielson</h1>
             <h2 className='text-4xl text-balance font-bold'>Commerical Audio Specialist</h2>
-            {/* <Nav /> */}
-            <div className='w-full h-6 bg-gradient-to-r from-green-600 to-green-300'>
-              <div className='text-center w-full'>Book Me</div>
-            </div>
+      </div>
+      <div className='w-full h-6 bg-gradient-to-r from-green-600 to-green-300'>
+        <div className='text-center w-full'>Book Me</div>
       </div>
       
       <Section title='About Me'>
