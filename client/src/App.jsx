@@ -1,7 +1,9 @@
 import Nav from './components/Nav'
 import Section from './components/Section'
 import Music from './components/Music'
+import Card from './components/Card'
 import profilePic from './assets/profile-pic.png'
+import jazz from './assets/jazz.png'
 
 import './App.css'
 
@@ -38,8 +40,19 @@ function App() {
         <Music />
       </Section>
       
-      <Section title='My Work'/>
-      <Section title='Services'/>
+      <Section title='My Work'>
+        <div className='flex flex-col'>
+          <Card title='Title' description='Description' image={jazz} />
+          <Card title='Title' description='Description' image={jazz} />
+          <Card title='Title' description='Description' image={jazz} />
+          <Card title='Title' description='Description' image={jazz} />
+        </div>
+      </Section>
+
+      <Section title='Services'>
+        <Card title='Title' description='Description' image={jazz} />
+        <Card title='Title' description='Description' image={jazz} />
+      </Section>
   </div>
   )
 }
