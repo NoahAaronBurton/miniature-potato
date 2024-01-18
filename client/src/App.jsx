@@ -2,6 +2,10 @@ import Nav from './components/Nav'
 import Section from './components/Section'
 import Music from './components/Music'
 import Card from './components/Card'
+
+import { FaInstagram } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
 import profilePic from './assets/profile-pic.png'
 import jazz from './assets/jazz.png'
 
@@ -24,10 +28,10 @@ function App() {
 
   return (
   <div className='flex flex-col min-h-screen flex-wrap pt-5 w-full'>
-     <div className='container w-full'>
-            <h1 className='text-6xl text-balance font-bold'>Brendon Nielson</h1>
-            <h2 className='text-4xl text-balance font-bold'>Commerical Audio Specialist</h2>
-      </div>
+        <div className='w-auto'>
+          <h1 className='text-6xl text-balance font-bold'>Brendon Nielson</h1>
+          <h2 className='text-4xl text-balance'>Commerical Audio Specialist</h2>
+        </div>
       <div className='w-full h-6 bg-gradient-to-r from-green-600 to-green-300'>
         <div className='text-center w-full'>Book Me</div>
       </div>
@@ -56,8 +60,13 @@ function App() {
 
       <Section title='Contact Me'>
         <div className='flex flex-col md:flex-row'>
-          <div className='w-full md:w-1/2 mb-4'>
-            <p>While JavaScript is never required for Netlify Forms, you can use JavaScript to submit forms with AJAX/XHR if you’d like. That makes Netlify Forms a great companion to sites powered by Vue, React, or other modern frameworks.</p>
+          <div className='flex flex-col w-full md:w-1/2 mb-4 justify-between'>
+            <p className='mr-6'>While JavaScript is never required for Netlify Forms, you can use JavaScript to submit forms with AJAX/XHR if you’d like. That makes Netlify Forms a great companion to sites powered by Vue, React, or other modern frameworks.</p>
+            <div className='flex flex-row w-auto justify-items-end mt-4 md:mt-0' >
+              <a href=""><FaInstagram className='mr-1' size={'32'}/></a>
+              <a href=""><FaXTwitter className='mr-1' size={'32'} /></a>
+              <a href=""><FaLinkedinIn className='mr-1' size={'32'} /></a>
+            </div>
           </div>
             <div className='w-full md:w-1/2'>
               <form className="w-full max-w-lg mx-auto">
